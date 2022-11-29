@@ -18,7 +18,7 @@
         <div id="container-list">
             <ul v-if="tasks.length !== 0">
                 <li v-for="(task, index) in tasks" :class=" task.done ? 'done' : '' ">
-                    {{task.text}}
+                    <p>{{task.text}}</p>
                     <div id="task-option">
                         <div @click="checkTask(index)" :class="task.done ? 'checked':''">&check;</div>
                         <div @click="delTask(index)">&cross;</div>

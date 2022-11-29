@@ -53,6 +53,13 @@ li{
     justify-content: space-between;
 }
 
+li p{
+    white-space: nowrap;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 #task-option > *{
     display: inline-block;
     margin-left: 10px;
