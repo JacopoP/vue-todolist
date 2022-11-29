@@ -10,13 +10,20 @@
 <body>
     <div id="app">
         <h1>To do list</h1>
-        <form>
-            <input type="text" v-model="newTask">
-            <input type="submit" @click="addTask">
-        </form>
+        <div id="container-form">
+            <input type="text" placeholder="Scrivi qui il compito da aggiungere" v-model="newTask" @keyup.enter="addTask">
+            <input type="submit" @click="addTask" value="Salva">
+            <h2 v-if="error">Inserisci prima una task</h2>
+        </div>
         <div id="container-list">
             <ul>
-                <li v-for="(task, index) in tasks">{{task.text}}</li>
+                <li v-for="(task, index) in tasks" :class=" task.done ? 'done' : '' ">
+                    {{task.text}}
+                    <div id="task-option">
+                        <div @click="checkTask(index)" :class="task.done ? 'checked':''">&check;</div>
+                        <div @click="delTask(index)">&cross;</div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

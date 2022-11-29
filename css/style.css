@@ -3,3 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.done{
+    text-decoration: line-through;
+}
+
+h1{
+    text-align: center;
+}
+
+#container-form{
+    width: 600px;
+    margin: 20px auto; 
+    position: relative;
+}
+
+#container-form h2{
+    color: red;
+    
+}
+
+input[type="text"]{
+    width: 85%;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+input[type="submit"]{
+    padding: 4px 10px;
+    margin-left: 35px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#container-list{
+    width: 700px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+li{
+    list-style: none;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#task-option > *{
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20px;
+    text-align: center;
+}
+
+.checked{
+    color: green;
+}
