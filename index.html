@@ -16,7 +16,7 @@
             <h2 v-if="error">Inserisci prima una task</h2>
         </div>
         <div id="container-list">
-            <ul>
+            <ul v-if="tasks.length !== 0">
                 <li v-for="(task, index) in tasks" :class=" task.done ? 'done' : '' ">
                     {{task.text}}
                     <div id="task-option">
@@ -25,6 +25,7 @@
                     </div>
                 </li>
             </ul>
+            <h2 v-else>Non hai task salvate</h2>
         </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
